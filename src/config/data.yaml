@@ -1,0 +1,37 @@
+project:
+  seed: 42
+
+sources:
+  tweet_eval:
+    dataset_name: cardiffnlp/tweet_eval
+    subset: sentiment
+    rows_target: 400
+  amazon_reviews:
+    dataset_name: SetFit/amazon_reviews_multi_en
+    rows_target: 400
+
+labels:
+  classes:
+    - negative
+    - neutral
+    - positive
+  amazon_star_mapping:
+    negative: [0, 1]
+    neutral: [2]
+    positive: [3, 4]
+
+paths:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  curated_dataset: data/processed/curated_sentiment_dataset.csv
+  split_dir: data/processed/splits
+  curation_report: data/processed/dataset_curation_report.md
+  preprocessing_report: data/processed/preprocessing_quality_report.md
+  ambiguous_rows: data/interim/ambiguous_rows_for_manual_review.csv
+
+split:
+  train_size: 0.7
+  validation_size: 0.15
+  test_size: 0.15
+  stratify: true
