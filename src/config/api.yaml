@@ -1,0 +1,12 @@
+api:
+  title: Sentiment Analysis API
+  version: 0.1.0
+
+paths:
+  ml_model_path: artifacts/ml/tfidf_sentiment_pipeline.joblib
+  dl_model_dir: artifacts/dl/distilbert_sentiment
+  sqlite_path: logs/predictions.db
+
+logging:
+  log_inputs: true
+  table_name: prediction_logs

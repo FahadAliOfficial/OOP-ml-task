@@ -1,0 +1,24 @@
+project:
+  seed: 42
+
+paths:
+  train_data: data/processed/splits/train.csv
+  validation_data: data/processed/splits/validation.csv
+  test_data: data/processed/splits/test.csv
+  artifact_dir: artifacts/dl
+  model_dir: artifacts/dl/distilbert_sentiment
+  metrics_path: artifacts/dl/dl_metrics.json
+
+model:
+  pretrained_name: distilbert-base-uncased
+  num_labels: 3
+  max_length: 128
+
+training:
+  epochs: 4
+  batch_size: 8
+  learning_rate: 0.00002
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  early_stopping_patience: 2
+  metric_for_best_model: f1_macro

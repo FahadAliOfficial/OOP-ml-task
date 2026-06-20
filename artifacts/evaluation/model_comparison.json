@@ -1,0 +1,103 @@
+{
+  "summary": {
+    "ml_test_macro_f1": 0.497451963241437,
+    "dl_test_macro_f1": 0.6750261233019854,
+    "absolute_macro_f1_gain": 0.17757416006054844,
+    "relative_macro_f1_gain_percent": 35.69674525022696,
+    "recommended_model": "DistilBERT",
+    "recommendation_reason": "DistilBERT provides a substantial macro-F1 improvement while retaining practical GPU inference latency. Classical ML remains the lightweight fallback."
+  },
+  "overall_metrics": [
+    {
+      "model": "Classical ML",
+      "accuracy": 0.5,
+      "macro_precision": 0.4964646464646465,
+      "macro_recall": 0.5,
+      "macro_f1": 0.497451963241437,
+      "weighted_f1": 0.4974519632414369
+    },
+    {
+      "model": "DistilBERT",
+      "accuracy": 0.6916666666666667,
+      "macro_precision": 0.6803055100927442,
+      "macro_recall": 0.6916666666666668,
+      "macro_f1": 0.6750261233019854,
+      "weighted_f1": 0.6750261233019853
+    }
+  ],
+  "per_class_metrics": [
+    {
+      "model": "Classical ML",
+      "label": "negative",
+      "precision": 0.55,
+      "recall": 0.55,
+      "f1": 0.55,
+      "support": 40
+    },
+    {
+      "model": "Classical ML",
+      "label": "neutral",
+      "precision": 0.4166666666666667,
+      "recall": 0.375,
+      "f1": 0.39473684210526316,
+      "support": 40
+    },
+    {
+      "model": "Classical ML",
+      "label": "positive",
+      "precision": 0.5227272727272727,
+      "recall": 0.575,
+      "f1": 0.5476190476190477,
+      "support": 40
+    },
+    {
+      "model": "DistilBERT",
+      "label": "negative",
+      "precision": 0.7021276595744681,
+      "recall": 0.825,
+      "f1": 0.7586206896551724,
+      "support": 40
+    },
+    {
+      "model": "DistilBERT",
+      "label": "neutral",
+      "precision": 0.6153846153846154,
+      "recall": 0.4,
+      "f1": 0.48484848484848486,
+      "support": 40
+    },
+    {
+      "model": "DistilBERT",
+      "label": "positive",
+      "precision": 0.723404255319149,
+      "recall": 0.85,
+      "f1": 0.7816091954022989,
+      "support": 40
+    }
+  ],
+  "operational_metrics": [
+    {
+      "model": "Classical ML",
+      "training_time_seconds": 5.609289099986199,
+      "inference_time_ms_per_sample": 0.02085666662120881,
+      "model_size_mb": 0.06665420532226562
+    },
+    {
+      "model": "DistilBERT",
+      "training_time_seconds": 216.8941242999863,
+      "inference_time_ms_per_sample": 11.945123333134688,
+      "model_size_mb": 256.3295202255249
+    }
+  ],
+  "charts": [
+    "artifacts\\evaluation\\overall_test_metrics.png",
+    "artifacts\\evaluation\\per_class_precision.png",
+    "artifacts\\evaluation\\per_class_recall.png",
+    "artifacts\\evaluation\\per_class_f1.png",
+    "artifacts\\evaluation\\confusion_matrices.png",
+    "artifacts\\evaluation\\training_time.png",
+    "artifacts\\evaluation\\inference_speed.png",
+    "artifacts\\evaluation\\model_size.png",
+    "artifacts\\evaluation\\distilbert_training_history.png"
+  ]
+}

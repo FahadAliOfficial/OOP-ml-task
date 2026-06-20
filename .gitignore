@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tmp/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data and generated artifacts
+data/raw/*
+data/interim/*
+data/processed/*
+artifacts/ml/*
+artifacts/dl/*
+artifacts/evaluation/*
+logs/*
+*.db
+*.sqlite
+*.sqlite3
+
+# Keep selected generated reports and curated data visible.
+!artifacts/ml/ml_metrics.json
+!artifacts/dl/dl_metrics.json
+!artifacts/evaluation/
+!artifacts/evaluation/*
+!data/interim/
+!data/interim/.gitkeep
+!data/interim/ambiguous_rows_for_manual_review.csv
+!data/processed/
+!data/processed/.gitkeep
+!data/processed/curated_sentiment_dataset.csv
+!data/processed/dataset_curation_report.md
+!data/processed/preprocessing_quality_report.md
+!data/processed/splits/
+!data/processed/splits/*.csv
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
